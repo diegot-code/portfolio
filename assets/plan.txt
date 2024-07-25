@@ -1,15 +1,4 @@
-PORTFOLIO/
-├── assets/
-│   └── plan.txt
-│   └── images.txt
-├── connect/
-│   └── index.html
-├── journey/
-│   └── index.html
-├── projects/
-│   └── index.html
-├── index.html
-└── README.md
+
 
 
 
