@@ -2,11 +2,68 @@
 
 * {
   font-family: "Acme", sans-serif;
+  color: var(--text);
 }
 
 body,
 html {
-  -webkit-text-stroke: 0.1px rgb(100, 100, 100);
+  /* -webkit-text-stroke: 0.1px rgb(100, 100, 100); */
   margin: 0;
   padding: 0;
+  background-color: var(--background);
 }
+
+:root {
+  --text: #010112;
+  --background: #f0f0fe;
+  --primary: #1c1def;
+  --secondary: #f680e8;
+  --accent: #7ea3cd;
+}
+
+/* General styling for the navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  margin-inline: auto;
+  display: flex;
+  gap: 5rem;
+  /* position: relative; */
+}
+
+nav ul a {
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  transition: all ease-in-out 2s;
+  position: relative;
+}
+
+nav ul a:hover {
+  /* background: linear-gradient(90deg, #8b46c5, #df98c1);
+  background-clip: text;
+  color: transparent; */
+  background-color: var(--accent);
+  text-decoration: underline;
+}
+
+/* nav ul a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: aqua;
+  height: 2px;
+  bottom: 0px;
+  transform: scaleX(0);
+  transition: all 0.4s ease-in-out;
+}
+nav ul a:hover:after {
+  visibility: visible;
+  transform: scaleX(1);
+} */
