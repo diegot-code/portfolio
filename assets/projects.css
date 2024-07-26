@@ -1,0 +1,65 @@
+#reposContainer {
+  display: flex;
+}
+
+#reposContainer:hover > :not(:hover) {
+  opacity: 0.4;
+}
+
+#reposContainer .repo-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.repo-info {
+  transition: 0.3s;
+  width: 30vw;
+  height: 40dvh;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  position: relative;
+  isolation: isolate;
+}
+
+.repo-info::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: aliceblue;
+  inset: 0;
+
+  transition: scale 450ms;
+  scale: 0 1;
+  transform-origin: left;
+}
+
+.repo-info:hover::after {
+  scale: 1 1;
+  transform-origin: right;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.repo-info ul li {
+  background: hsla(0, 100%, 50%, 0.616);
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.repo-info a {
+  text-decoration: none;
+  background: linear-gradient(90deg, hsl(84, 100%, 59%), hsl(240, 100%, 22%));
+  background-clip: text;
+  color: transparent;
+}
