@@ -1,3 +1,7 @@
+<?php
+$pageTitle = "Journey";
+$pageHeader = "Display experience through cards for each portion of education and/or work experience"
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,9 +10,9 @@
     <title>Journey</title>
   </head>
   <body>
-    <h1>
-      Display experience through cards for each portion of education and/or work
-      experience
-    </h1>
+    <?php
+    require_once "../assets/templates/header.html";
+    ?>
+    <h1><?=$pageHeader?></h1>
   </body>
 </html>

@@ -1,10 +1,7 @@
 <?php
-
 $pageTitle = "Projects";
-
+$pageHeader = "Display all Projects as Cards and links to them using github API";
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,6 +10,9 @@ $pageTitle = "Projects";
     <title><?=$pageTitle?></title>
   </head>
   <body>
-    <h1>Display all Projects as Cards and links to them using github API</h1>
+    <?php
+    require_once "../assets/templates/header.html";
+    ?>
+    <h1><?=$pageHeader?></h1>
   </body>
 </html>
