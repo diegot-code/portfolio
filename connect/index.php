@@ -1,6 +1,11 @@
 <?php
 $pageTitle = "Connect";
 $pageHeader = "Make a contact form";
+$functions = "../assets/functions.php";
+$pathToNavItems = "../assets/templates/navItems.php";
+
+include $pathToNavItems;
+include $functions;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +16,8 @@ $pageHeader = "Make a contact form";
   </head>
   <body>
     <?php
-    require_once "../assets/templates/header.html";
+    generateNavbar($pageTitle, $navigation_items);
+    
     ?>
     <h1><?=$pageHeader?></h1>
   </body>

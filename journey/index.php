@@ -1,6 +1,11 @@
 <?php
 $pageTitle = "Journey";
-$pageHeader = "Display experience through cards for each portion of education and/or work experience"
+$pageHeader = "Display experience through cards for each portion of education and/or work experience";
+$functions = "../assets/functions.php";
+$pathToNavItems = "../assets/templates/navItems.php";
+
+include $pathToNavItems;
+include $functions;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +16,7 @@ $pageHeader = "Display experience through cards for each portion of education an
   </head>
   <body>
     <?php
-    require_once "../assets/templates/header.html";
+    generateNavbar($pageTitle, $navigation_items);
     ?>
     <h1><?=$pageHeader?></h1>
   </body>

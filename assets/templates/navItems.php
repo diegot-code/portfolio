@@ -2,7 +2,7 @@
 $navigation_items = [
     [
         "name" => "Home",
-        "path" => "index.php",
+        "path" => "/",
     ],
     [
         "name" => "Projects",
