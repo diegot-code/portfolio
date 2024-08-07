@@ -1,23 +1,33 @@
 <?php
 
 function generateNavbar($page, $items) {
-    echo '<ul>';
+    ?>
+    <header>
+        <nav>        
+            <ul>
+    
+    <?php
     foreach ($items as $item) {
         if ($page == "Home") {
         ?>
         <li>
-            <a href="<?= "." . $item["path"] ?>"> <?= $item["name"] ?> </a>
+            <a class="<?= $item["a-s"] ?>" href="<?= "." . $item["path"] ?>"> <?= $item["name"] ?> </a>
         </li>
         <?php
         }
         else {
             ?>
         <li>
-            <a href="<?= ".." . $item["path"] ?>"> <?= $item["name"] ?> </a>
+            <a class="<?= $item["a-s"] ?>" href="<?= ".." . $item["path"] ?>"> <?= $item["name"] ?> </a>
         </li>
         <?php
 
         }
     }
-    echo '</ul>';
+    ?>
+            </ul>
+        </nav>
+    </header>
+
+    <?php
 }
