@@ -8,18 +8,20 @@ function generateNavbar($page, $items) {
     
     <?php
     foreach ($items as $item) {
+        // Specifically for the Home page since the Home page is inside the root
         if ($page == "Home") {
         ?>
-        <li>
-            <a class="<?= $item["a-s"] ?>" href="<?= "." . $item["path"] ?>"> <?= $item["name"] ?> </a>
-        </li>
+        <a class="<?= $item["a-s"] ?>" href="<?= "." . $item["path"] ?>">
+            <li> <?= $item["name"] ?> </li>
+        </a>
         <?php
         }
+        // For the rest 
         else {
             ?>
-        <li>
-            <a class="<?= $item["a-s"] ?>" href="<?= ".." . $item["path"] ?>"> <?= $item["name"] ?> </a>
-        </li>
+        <a class="<?= $item["a-s"] ?>" href="<?= ".." . $item["path"] ?>">
+            <li> <?= $item["name"] ?> </li>
+        </a>
         <?php
 
         }
