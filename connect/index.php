@@ -1,11 +1,13 @@
 <?php
 $pageTitle = "Connect";
 $pageHeader = "Make a contact form";
-$functions = "../assets/functions.php";
-$pathToNavItems = "../assets/templates/navItems.php";
+$paths = [
+  "functions" => "../assets/functions.php",
+  "navItems" => "../assets/templates/navItems.php"
+];
 
-include $pathToNavItems;
-include $functions;
+include $paths['navItems'];
+include $paths['functions'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

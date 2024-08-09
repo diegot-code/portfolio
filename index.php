@@ -1,11 +1,14 @@
 <?php
 $pageTitle = "Home";
 $pageHeader = "Homepage";
-$functions = "./assets/functions.php";
-$pathToNavItems = "./assets/templates/navItems.php";
 
-include $pathToNavItems;
-include $functions;
+$paths = [
+  "functions" => "./assets/functions.php",
+  "navItems" => "./assets/templates/navItems.php"
+];
+
+include $paths['navItems'];
+include $paths['functions'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
