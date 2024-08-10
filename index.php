@@ -4,7 +4,8 @@ $pageHeader = "Homepage";
 
 $paths = [
   "functions" => "./assets/functions.php",
-  "navItems" => "./assets/templates/navItems.php"
+  "navItems" => "./assets/templates/navItems.php",
+  "headTemplate" => "./assets/templates/head.php"
 ];
 
 include $paths['navItems'];
@@ -12,12 +13,9 @@ include $paths['functions'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?=$pageTitle?></title>
-    <link rel="stylesheet" href="assets/home.css" />
-  </head>
+  <?php
+  require_once $paths['headTemplate'];
+  ?>
   <body>
     <?php
     generateNavbar($pageTitle ,$navigation_items);
