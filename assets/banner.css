@@ -1,0 +1,25 @@
+#banner {
+  width: 100%;
+  height: 50vh;
+  display: grid;
+  place-items: center;
+}
+
+.banner-interior {
+  display: flex;
+  max-width: 60vw;
+}
+
+.banner-interior > * {
+  margin-inline: 0;
+}
+
+.banner-interior:nth-child(1) {
+  margin-block: 1rem;
+}
+
+.banner-interior:nth-child(2) {
+  /* padding: 0; */
+  height: min-content;
+  margin-block: auto;
+}
