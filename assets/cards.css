@@ -1,0 +1,31 @@
+.marquee {
+  width: 80vw;
+  gap: 1rem;
+  display: flex;
+  overflow: hidden;
+  border: solid 2px gray;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.project-card {
+  width: 10rem;
+  height: 15rem;
+  overflow: hidden;
+  white-space: wrap;
+  box-sizing: border-box;
+  animation: marquee 10s linear infinite;
+  border: solid 1px black;
+}
+
+.project-card p {
+  display: flex;
+  flex-wrap: wrap;
+}
