@@ -30,6 +30,18 @@ include $paths['functions'];
     <?php
     generateNavbar($pageTitle, $navigation_items);    
     ?>
-    <h1><?=$pageHeader?></h1>
+    <div class="form">
+    <form id="connectForm" action="process.php" method="GET">
+        <div class="input">
+          <label for="firstname">Firstname</label><input id="firstname" type="text" name="firstname">
+        </div>
+        <div class="input">
+          <label for="lastname">Lastname</label><input id="lastname" type="text" name="lastname">
+        <div class="input">
+          <label for="email">Email</label><input id="email" type="email" name="email">
+        </div>
+        <button type="submit" name="contactBtn">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
